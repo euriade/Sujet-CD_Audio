@@ -36,4 +36,15 @@ export default [
       globals: globals.jest,
     },
   },
+  {
+    files: ['tests/e2e/**/*.cy.{js,jsx}'],
+    languageOptions: {
+      globals: {
+        ...globals.mocha,
+        cy: 'readonly',
+        Cypress: 'readonly',
+        expect: 'readonly',
+      },
+    },
+  },
 ]

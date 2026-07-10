@@ -20,7 +20,7 @@ describe("AddCD", () => {
     }
   });
 
-  test("renders the three form fields", async () => {
+  test("renders the form fields", async () => {
     view = await renderComponent(<AddCD onAdd={jest.fn()} />);
 
     expect(view.container.querySelector('input[name="title"]')).not.toBeNull();

@@ -12,7 +12,7 @@ const AddCD = ({ onAdd }) => {
     e.preventDefault();
     if (!form.title || !form.artist || !form.year) return;
 
-    await addCD(form);
+    await addCD({ ...form, year: parseInt(form.year, 10) });
     onAdd();
     setForm({ title: "", artist: "", year: "" });
   };
