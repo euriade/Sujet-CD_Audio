@@ -57,7 +57,7 @@ describe("AddCD", () => {
     expect(addCD).toHaveBeenCalledWith({
       title: "Discovery",
       artist: "Daft Punk",
-      year: "2001",
+      year: 2001,
     });
     expect(onAdd).toHaveBeenCalledTimes(1);
     expect(titleInput.value).toBe("");
